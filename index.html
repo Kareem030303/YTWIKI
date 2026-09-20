@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTuber Wiki - Encyclopedia</title>
+    <title>YouTube History & Creator Wiki</title>
     <style>
         :root {
             --wiki-border: #a2a9b1;
@@ -73,6 +73,7 @@
         .infobox table {
             width: 100%;
             border-collapse: collapse;
+            margin-bottom: 15px;
         }
 
         .infobox th, .infobox td {
@@ -81,15 +82,44 @@
             text-align: left;
         }
 
+        /* Table of Contents */
+        .toc {
+            background-color: var(--wiki-bg);
+            border: 1px solid var(--wiki-border);
+            padding: 15px;
+            display: inline-block;
+            margin-bottom: 20px;
+            min-width: 280px;
+        }
+
+        .toc h3 {
+            margin: 0 0 10px 0;
+            font-size: 1rem;
+            text-align: center;
+            border-bottom: 1px solid var(--wiki-border);
+            padding-bottom: 5px;
+        }
+
+        .toc ul {
+            margin: 0;
+            padding-left: 20px;
+            font-size: 0.9rem;
+        }
+
+        .toc a {
+            color: var(--wiki-link);
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
         h2 {
             font-family: serif;
             border-bottom: 1px solid var(--wiki-border);
             padding-bottom: 4px;
             margin-top: 30px;
-        }
-
-        p {
-            margin-bottom: 15px;
         }
 
         .video-card {
@@ -115,6 +145,18 @@
             border: 0;
         }
 
+        .creator-box {
+            background: var(--wiki-bg);
+            border: 1px solid var(--wiki-border);
+            padding: 12px;
+            margin-bottom: 15px;
+        }
+
+        .creator-box h4 {
+            margin: 0 0 5px 0;
+            color: var(--wiki-link);
+        }
+
         footer {
             margin-top: 40px;
             border-top: 1px solid var(--wiki-border);
@@ -129,60 +171,95 @@
 
     <header>
         <h1><span>Wiki</span>Tuber</h1>
-        <p>From the free encyclopedia of creators</p>
+        <p>The Free YouTube Encyclopedia</p>
     </header>
 
     <div class="content-container">
         
         <!-- Main Article Section -->
         <div class="main-article">
-            <h2>[YouTuber Name]</h2>
-            <p><strong>[Darryl Mayes]</strong> (born [1997]) is a prominent internet personality and content creator best known for producing lifestyle, gaming, or commentary videos on YouTube. Since joining the platform, they have gathered a massive global following.</p>
+            <h2>YouTube History & Creators</h2>
+            <p><strong>YouTube</strong> is a global online video sharing and social media platform. Over the years, it has produced historic milestones, viral phenomena, and a whole new generation of internet content creators.</p>
 
-            <h2>Most Popular Video</h2>
+            <!-- Table of Contents -->
+            <div class="toc">
+                <h3>Contents</h3>
+                <ul>
+                    <li><a href="#popular">1 Most Popular Video (Baby Shark)</a></li>
+                    <li><a href="#first">2 First Video on YouTube (Me at the zoo)</a></li>
+                    <li><a href="#creators">3 Featured Creators Pages</a></li>
+                </ul>
+            </div>
+
+            <h2 id="popular">Most Popular Video</h2>
             <div class="video-card">
-                <h3>"Baby Shark"</h3>
-                <p>Released in [2016], this is currently the channel's most-watched video, having a massive 16 billion  views.</p>
+                <h3>"Baby Shark Dance" — Pinkfong</h3>
+                <p>Released in 2016, this children's music video grew into a massive global phenomenon and holds the record as the most-watched video in YouTube history.</p>
                 <div class="video-wrapper">
-                    <!-- Replace the embed URL ID (dQw4w9WgXcQ) with her popular video ID -->
-                    <iframe src= https://www.youtube.com/embed/XqZsoesa55w" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/XqZsoesa55w" allowfullscreen></iframe>
                 </div>
             </div>
 
-            <h2>First Video</h2>
+            <h2 id="first">First Video on YouTube</h2>
             <div class="video-card">
-                <h3>"Another Popular Video"</h3>
-                <p>Uploaded on [2008], this historical artifact marks part of the beginning of youtube's journey.</p>
+                <h3>"Me at the zoo" — Jawed Karim</h3>
+                <p>Uploaded on April 23, 2005, this is the very first video ever uploaded to YouTube, featuring co-founder Jawed Karim at the San Diego Zoo.</p>
                 <div class="video-wrapper">
-                    <!-- Replace the embed URL ID (dQw4w9WgXcQ) with her first video ID -->
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                    <!-- YouTube's official first video ID -->
+                    <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw" allowfullscreen></iframe>
                 </div>
+            </div>
+
+            <h2 id="creators">Featured Creators Pages</h2>
+            <p>Profiles of popular content creators documented in this encyclopedia:</p>
+
+            <div class="creator-box">
+                <h4>Dtay Known</h4>
+                <p><strong>Real Name:</strong> Dante Williams<br><strong>Age:</strong> 28<br>Known for his viral comedy skits, song parodies, and entertainment content.</p>
+            </div>
+
+            <div class="creator-box">
+                <h4>Kyle Exum</h4>
+                <p><strong>Real Name:</strong> Kyle Exum<br><strong>Age:</strong> 28<br>Famous for creative storytelling rap videos, comedy sketches, and energetic content.</p>
+            </div>
+
+            <div class="creator-box">
+                <h4>Darryl Maye</h4>
+                <p><strong>Name:</strong> Darryl Maye<br>Popular creator recognized for engaging community entertainment and online presence.</p>
             </div>
         </div>
 
         <!-- Wikipedia Infobox -->
         <aside class="infobox">
-            <h3>[YouTuber Name]</h3>
+            <h3>YouTube Platform</h3>
             <table>
                 <tr>
-                    <th>Occupation</th>
-                    <td>YouTuber, Streamer</td>
+                    <th>Launched</th>
+                    <td>February 14, 2005</td>
                 </tr>
                 <tr>
-                    <th>Years active</th>
-                    <td>2018–present</td>
+                    <th>Founders</th>
+                    <td>Jawed Karim, Steve Chen, Chad Hurley</td>
                 </tr>
                 <tr>
-                    <th>Channel</th>
-                    <td><a href="#" target="_blank">Link to Channel</a></td>
+                    <th>Parent Company</th>
+                    <td>Google</td>
                 </tr>
                 <tr>
-                    <th>Subscriber count</th>
-                    <td>[X] Million</td>
+                    <th>Type of site</th>
+                    <td>Video sharing</td>
+                </tr>
+            </table>
+
+            <h3>Featured Hub</h3>
+            <table>
+                <tr>
+                    <th>Top Video</th>
+                    <td>Baby Shark Dance</td>
                 </tr>
                 <tr>
-                    <th>Genre</th>
-                    <td>Entertainment / Gaming</td>
+                    <th>First Video</th>
+                    <td>Me at the zoo</td>
                 </tr>
             </table>
         </aside>
@@ -190,14 +267,8 @@
     </div>
 
     <footer>
-        <p>Text is available under the Creative Commons Attribution-ShareAlike License; additional terms may apply.</p>
+        <p>Text is available under the Creative Commons Attribution-ShareAlike License; WikiTuber GitHub Project.</p>
     </footer>
 
 </body>
 </html>
-<!-- References Section -->
-            <h2 id="references">References</h2>
-            <ol style="font-size: 0.85rem; color: #54595d;">
-                <li><cite>Creator Interviews. "How [Dtay Known] Built Their Empire." Retrieved 2026.</cite></li>
-                <li><cite>YouTube Creator Spotlight. "Milestone Statistics and History."</cite></li>
-            </ol>
